@@ -86,3 +86,7 @@
   .step { width: 177.333333px; }
   .step[data-active='true'] { width: 552px; }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: #59524f; }
+}

@@ -5,3 +5,4 @@
 @media(min-width:1440px){.section{height:758px;padding-bottom:130px}.container{padding-right:30px;padding-left:30px;gap:50px}.container>h2{font-size:40px;line-height:48px}.cards{height:530px}.caseDetails h3{font-size:28px;line-height:33.6px}.caseBody>img{height:250px}.solutionBody{padding:40px;gap:40px}.results strong{font-size:20px;line-height:24px}}
 @media(min-width:1920px){.section{height:724.40625px}.cards{height:496.40625px}}
 @media(prefers-reduced-motion:reduce){.container{opacity:1!important;transform:none!important}}
+@media(hover:hover) and (pointer:fine){.solutionBody>a:hover{background:#59524f}}

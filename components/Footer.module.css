@@ -73,3 +73,7 @@
     transform: none !important;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: #59524f; }
+}
