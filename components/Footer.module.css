@@ -1,0 +1,75 @@
+.footer { min-height: 879.25px; box-sizing: border-box; padding-bottom: 30px; background: #f4f2e8; color: #151413; }
+.container { max-width: 1500px; margin: 0 auto; padding: 0 12px; }
+.contactBand { min-height: 207px; box-sizing: border-box; display: grid; grid-template-columns: 1fr; gap: 16px; padding: 16px; border-radius: 10px; background: #262322; color: #fff; }
+.contactBand h2 { margin: 0; font: 700 20px/24px "Open Sauce Sans", sans-serif; }
+.contacts { display: flex; flex-direction: column; gap: 10px; }
+.contacts a { color: #fff; font: 500 16px/22.4px "General Sans", sans-serif; text-decoration: none; }
+.socials { display: flex; gap: 10px; }
+.socials a { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 6px; background: #f4f2e8; }
+.socials img { width: 18px; height: 18px; }
+.lower { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }
+.pagesCard, .ctaCard { box-sizing: border-box; padding: 16px; border-radius: 10px; background: #fffffb; }
+.pagesCard { height: 255px; display: flex; flex-direction: column; justify-content: space-between; gap: 30px; }
+.logo img { display: block; width: 146.875px; height: 36px; }
+.pages { width: 100%; order: -1; }
+.pages h3 { margin: 0 0 17px; font: 700 18px/21.6px "Open Sauce Sans", sans-serif; }
+.pages nav { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, auto); grid-auto-flow: column; gap: 10px; }
+.pages a { color: #59524f; font: 500 16px/22.4px "General Sans", sans-serif; text-decoration: none; }
+.pages a.active { color: #f55107; }
+.ctaCard { height: 367px; display: flex; flex-direction: column; justify-content: flex-start; }
+.action h3 { max-width: 300px; margin: 0 0 18px; font: 700 20px/24px "Open Sauce Sans", sans-serif; }
+.cta { width: 188.828125px; min-height: 46.40625px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-radius: 10px; background: #f55107; color: #fff; font: 500 16px/22.4px "General Sans", sans-serif; text-decoration: none; }
+.cta img { width: 16px; height: 10px; }
+.address { display: flex; gap: 20px; align-items: center; margin-top: 18px; color: #151413; font: 500 17px/23.8px "General Sans", sans-serif; text-decoration: none; }
+.location { width: 134px; height: 150px; flex: none; border-radius: 10px; object-fit: cover; }
+.address span > img { width: 28px; height: 28px; display: block; margin-bottom: 10px; }
+.footer a:focus-visible { outline: 3px solid #f55107; outline-offset: 3px; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer { min-height: 855.25px; }
+  .ctaCard { height: 343px; }
+  .action h3 { max-width: none; }
+}
+@media (min-width: 1024px) {
+  .footer { min-height: 453.21875px; }
+  .container { padding: 0 20px; }
+  .contactBand { min-height: 72px; grid-template-columns: 21% 1fr 21%; align-items: center; gap: 30px; padding: 20px; }
+  .contacts { flex-direction: row; align-items: center; justify-content: center; gap: 10px; }
+  .socials { justify-content: flex-end; }
+  .lower { grid-template-columns: 1fr 1fr; }
+  .pagesCard, .ctaCard { height: 341px; padding: 20px; }
+  .logo img { width: 163.1875px; height: 40px; }
+  .ctaCard { flex-direction: column; justify-content: flex-start; gap: 0; }
+  .action { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+  .action h3 { max-width: none; flex: 1; margin: 0; }
+  .action h3 + .cta { margin-top: 18px; }
+  .action .cta { flex: none; }
+  .address { width: 100%; flex-direction: row; align-items: center; margin-top: 34px; font-size: 16px; line-height: 22.4px; }
+  .location { width: 100px; height: 100px; }
+}
+@media (min-width: 1440px) {
+  .footer { min-height: 465.625px; }
+  .container { padding: 0 30px; }
+  .contactBand { min-height: 82px; grid-template-columns: 22% 1fr 22%; gap: 10px; }
+  .contacts { gap: 20px; }
+  .contactBand h2 { font-size: 24px; line-height: 28.8px; }
+  .socials a { width: 42px; height: 42px; }
+  .socials img { width: 26px; height: 26px; }
+  .pagesCard, .ctaCard { height: 343.625px; }
+  .pages h3 { margin-bottom: 20px; font-size: 20px; line-height: 24px; }
+  .action { flex-direction: row; gap: 20px; }
+  .action h3 + .cta { margin-top: 0; }
+  .action h3 { font-size: 24px; line-height: 28.8px; }
+  .address { margin-top: 36px; font-size: 18px; line-height: 25.2px; }
+  .location { width: 150px; height: 150px; }
+}
+@media (min-width: 1920px) {
+  .contactBand, .lower { width: 1440px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contactBand,
+  .pagesCard,
+  .ctaCard {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

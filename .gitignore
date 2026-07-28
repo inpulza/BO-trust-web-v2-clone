@@ -1,0 +1,32 @@
+# dependencies and build output
+node_modules/
+.next/
+out/
+.vercel/
+
+# local environment
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# cloning harness and internal evidence
+_arnes/
+arnes/
+scripts/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.windsurf/
+.hermes-preview.html
+true
+tests/probe-contract.test.mjs
+tests/sections-contract.test.mjs
+
+# operating-system files
+.DS_Store
+Thumbs.db

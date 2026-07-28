@@ -1,0 +1,55 @@
+.section { height: 1255.125px; box-sizing: border-box; overflow: hidden; padding: 70px 0; background: #f4f2e8; color: #151413; }
+.container { max-width: 1500px; margin: 0 auto; padding: 0 12px; }
+.inner { display: flex; flex-direction: column; gap: 30px; }
+.inner > h2 { margin: 0; text-align: center; font: 700 30px/36px "Open Sauce Sans", sans-serif; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.card { height: 336.375px; box-sizing: border-box; padding: 10px; border-radius: 10px; background: #fffffb; color: #151413; text-decoration: none; overflow: hidden; }
+.card > img { display: block; width: 100%; height: 207.59375px; border-radius: 10px; object-fit: cover; }
+.copy { padding: 14px 6px 4px; }
+.meta { display: flex; justify-content: space-between; gap: 10px; font: 500 14px/19.6px "General Sans", sans-serif; }
+.meta span { color: #f55107; white-space: pre-wrap; }
+.meta time { color: #59524f; white-space: nowrap; }
+.card h3 { margin: 9px 0 0; font: 700 18px/21.6px "Open Sauce Sans", sans-serif; }
+.card:focus-visible { outline: 3px solid #f55107; outline-offset: 3px; }
+@media (max-width: 767.98px) {
+  .copy { padding: 20px 10px 4px; }
+  .card h3 { margin-top: 16px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section { height: 1870.734375px; }
+  .card { height: 541.578125px; }
+  .card > img { height: 434.390625px; }
+}
+@media (min-width: 1024px) {
+  .section { height: 606.375px; padding: 110px 0; }
+  .container { padding: 0 20px; }
+  .inner { gap: 40px; }
+  .inner > h2 { width: 800px; align-self: center; text-align: center; font-size: 34px; line-height: 40.8px; }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .card { height: 306px; }
+  .card > img { height: 177px; }
+}
+@media (min-width: 1440px) {
+  .section { height: 751.578125px; padding: 130px 0; }
+  .container { padding: 0 30px; }
+  .inner { gap: 50px; }
+  .inner > h2 { width: 800px; align-self: center; text-align: center; font-size: 40px; line-height: 48px; }
+  .grid { gap: 10px; }
+  .card { height: 393.578125px; }
+  .card > img { height: 259.984375px; }
+  .copy { padding: 18px 10px 4px; }
+  .card h3 { font-size: 20px; line-height: 24px; }
+}
+@media (min-width: 1920px) {
+  .section { height: 739.59375px; }
+  .inner { width: 1440px; }
+  .card { height: 381.59375px; }
+  .card > img { height: 271.984375px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inner > h2,
+  .card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

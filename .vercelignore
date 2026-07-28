@@ -1,0 +1,14 @@
+node_modules
+.next
+.vercel
+_arnes
+arnes
+tests
+scripts
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.hermes-preview.html
+*.tsbuildinfo
+*.log

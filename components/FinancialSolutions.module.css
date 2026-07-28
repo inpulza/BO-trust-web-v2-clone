@@ -1,0 +1,112 @@
+.section {
+  min-height: 2341.640625px;
+  padding-bottom: 70px;
+  overflow: clip;
+  display: flex;
+  justify-content: center;
+  background: #f4f2e8;
+}
+.container { width: 100%; max-width: 1000px; padding: 0 12px; display: flex; flex-direction: column; gap: 30px; }
+.container > h2 {
+  width: min(100%, 800px);
+  align-self: center;
+  margin: 0;
+  color: #151413;
+  font-family: "Open Sauce Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+.container > h2 strong { font-weight: 900; }
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.card {
+  width: 100%;
+  min-height: 532.359375px;
+  height: 532.359375px;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  color: #151413;
+  text-decoration: none;
+  font-family: "General Sans", sans-serif;
+}
+.card2 { min-height: 578.5625px; height: 578.5625px; background: #feea9d; }
+.card1 { background: #e8e4d6; }
+.card3 { background: #262322; color: #fff; }
+.card4 { background: #fffffb; }
+.media { width: 100%; height: 203.75px; border-radius: 10px; object-fit: cover; }
+.summary { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.icon { box-sizing: content-box; width: 24px; height: 24px; padding: 13px; margin: 0; border-radius: 6px; background: #fffffb; }
+.copy { width: 100%; }
+.summary h3 { margin: 0 0 12px; font-family: "Open Sauce Sans", sans-serif; font-size: 22px; font-weight: 700; line-height: 27px; }
+.summary p { margin: 0; color: #59524f; font-size: 16px; font-weight: 500; line-height: 22.4px; }
+.details ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.details { color: #59524f; }
+.details li { display: flex; gap: 9px; font-size: 15px; font-weight: 500; line-height: 21px; }
+.details li::before { content: "•"; color: #f55107; }
+.card3 .summary p, .card3 .details { color: #dad8d0; }
+.card:focus-visible { outline: 4px solid #f55107; outline-offset: 4px; }
+@media (min-width: 768px) and (max-width: 809.98px) {
+  .section { min-height: 3145.25px; }
+  .card, .card2 { min-height: 744.8125px; height: 744.8125px; }
+  .media { height: 440px; }
+  .summary h3 { font-size: 24px; line-height: 28.8px; }
+  .summary p { font-size: 18px; line-height: 25.2px; }
+  .details li { font-size: 16px; line-height: 22.4px; }
+  .media { order: 3; }
+  .summary { order: 1; }
+  .details { order: 2; }
+}
+@media (max-width: 767.98px) {
+  .media { order: 3; }
+  .summary { order: 1; }
+  .details { order: 2; }
+}
+@media (max-width: 809.98px) {
+  .card, .card2 { position: static; }
+  .summary h3 { margin-bottom: 6px; font-size: 20px; line-height: 24px; }
+  .summary p { font-size: 17px; line-height: 23.8px; }
+  .details ul { gap: 10px; }
+  .details li { font-size: 16px; line-height: 22.4px; }
+  .details, .media { transform: translateY(-10px); }
+}
+@media (min-width: 810px) {
+  .section { min-height: 1811.296875px; padding-bottom: 110px; }
+  .container { padding: 0 20px; gap: 40px; }
+  .container > h2 { font-size: 34px; line-height: 40.8px; }
+  .cards { gap: 50px; }
+  .card, .card2 {
+    position: sticky;
+    top: 100px;
+    min-height: 347.625px;
+    height: 347.625px;
+    padding: 30px;
+    grid-template-columns: 590px 280px;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+  }
+  .summary { grid-column: 1; grid-row: 1; }
+  .details { grid-column: 1; grid-row: 2; align-self: end; }
+  .media { height: 287.625px; grid-column: 2; grid-row: 1 / span 2; }
+  .summary h3 { font-size: 24px; line-height: 28.8px; }
+  .summary p { font-size: 18px; line-height: 25.2px; }
+  .details li { font-size: 16px; line-height: 22.4px; }
+}
+@media (min-width: 1200px) {
+  .section { min-height: 2147.6875px; padding-bottom: 130px; }
+  .container { padding: 0 30px; gap: 50px; }
+  .container > h2 { font-size: 40px; line-height: 48px; }
+  .cards { gap: 100px; }
+  .card, .card2 { min-height: 372.421875px; height: 372.421875px; padding: 40px; grid-template-columns: 560px 260px; gap: 40px; }
+  .media { height: 292.421875px; }
+}
+.card4 .icon { background: #151413; }
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .summary h3 { font-size: 20px; line-height: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .container > h2, .cards { opacity: 1 !important; transform: none !important; }
+}

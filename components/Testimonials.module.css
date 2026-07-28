@@ -1,0 +1,70 @@
+.section { position: relative; height: 874.40625px; box-sizing: border-box; padding: 70px 0; overflow: hidden; color: #fff; }
+.section::before, .section::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.section::before { background: url('/assets/54-cG0l9H9vB6Ch6t9010D43ntXmg.jpg') center / cover no-repeat; }
+.section::after { background: rgba(0, 0, 0, .6); }
+.container { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; padding: 0 12px; }
+.layout { display: flex; flex-direction: column; gap: 30px; }
+.partners { height: 242.40625px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.partners h2 { width: 100%; max-width: 600px; margin: 0; text-align: center; font: 700 30px/36px "Open Sauce Sans", sans-serif; }
+.partnerProof { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.eyebrow { display: inline-block; padding: 4px 10px; border-radius: 6px; background: #feea9d; color: #151413; font: 500 16px/22.4px "General Sans", sans-serif; }
+.logos { width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px; }
+.logos img { width: auto; max-width: 96px; height: 20px; object-fit: contain; filter: none; }
+.carousel { position: relative; width: 100%; height: 462px; }
+.viewport { width: 100%; height: 462px; overflow: hidden; }
+.rail { display: flex; align-items: flex-start; gap: 0; height: 100%; transform: translateX(calc(var(--active) * -100%)); }
+.card { min-width: 100%; height: 450px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; padding: 20px; border-radius: 10px; background: #f4f2e8; color: #151413; }
+.portrait { display: block; width: 100%; height: auto; aspect-ratio: 500/270; border-radius: 10px; object-fit: cover; }
+.cardBody { min-height: 0; flex: 1; display: flex; flex-direction: column; text-align: center; }
+.stars { display: block; width: 121px; height: 18px; margin: 0 auto; }
+.card blockquote { position: relative; top: 2px; margin: 14px 0 auto; color: #262322; font: 500 17px/23.8px "General Sans", sans-serif; text-wrap: balance; }
+.card strong, .card span { display: block; }
+.card strong { margin-bottom: 6px; font: 700 18px/21.6px "Open Sauce Sans", sans-serif; }
+.card span { color: #59524f; font: 500 14px/19.6px "General Sans", sans-serif; }
+.control { position: absolute; z-index: 2; top: 50%; width: 32px; height: 32px; padding: 7px; border: 0; border-radius: 6px; background: #feea9d; cursor: pointer; transform: translateY(-50%); }
+.control img { display: block; width: 18px; height: 12px; }
+.control:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.previous { left: -16px; }
+.next { right: -16px; }
+.status { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section { height: 798.40625px; }
+  .partners { height: 166.40625px; }
+  .partners h2 { max-width: none; text-align: left; }
+  .carousel { width: 460px; margin: 0 auto; }
+  .previous { left: -16px; }
+  .next { right: -16px; }
+  .card strong, .card span { position: relative; top: 9.390625px; }
+}
+@media (min-width: 1024px) {
+  .section { height: 682px; padding: 110px 0; }
+  .container { padding: 0 20px; }
+  .layout { height: 462px; flex-direction: row; gap: 40px; }
+  .partners { width: 555px; height: 462px; align-items: flex-start; }
+  .partners h2 { max-width: none; text-align: left; font-size: 34px; line-height: 40.8px; }
+  .partnerProof { align-items: flex-start; gap: 30px; }
+  .logos { justify-content: flex-start; gap: 30px 50px; }
+  .carousel { flex: 1; width: 389px; }
+}
+@media (min-width: 1440px) {
+  .section { height: 842px; padding: 130px 0; }
+  .container { padding: 0 30px; }
+  .layout { height: 582px; gap: 50px; }
+  .partners, .carousel { width: 665px; height: 582px; flex: 0 0 665px; }
+  .partners h2 { font-size: 40px; line-height: 48px; }
+  .partnerProof { gap: 30px; }
+  .logos { gap: 30px 50px; }
+  .viewport { position: absolute; top: 0; right: 0; width: 460px; height: 570px; }
+  .rail { height: 570px; transform: translateX(calc(var(--active) * -460px)); }
+  .card { min-width: 460px; height: 570px; padding: 40px; gap: 40px; }
+  .portrait { width: 380px; height: 205.1875px; }
+  .cardBody { height: 244.8125px; flex: none; box-sizing: border-box; }
+  .card blockquote { margin: 14px 0 auto; font-size: 18px; line-height: 25.2px; }
+  .card strong { font-size: 20px; line-height: 24px; }
+  .previous { left: auto; right: 444px; }
+  .next { right: -16px; }
+}
+@media (min-width: 1920px) {
+  .layout { width: 1440px; }
+  .partners, .carousel { width: 695px; flex-basis: 695px; }
+}

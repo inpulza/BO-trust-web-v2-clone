@@ -1,0 +1,31 @@
+@font-face { font-family: "General Sans"; src: url("/fonts/SB2OEB6IKZPRR6JT4GFJ2TFT6HBB6AZN.woff2") format("woff2"); font-style: normal; font-weight: 500; font-display: swap; }
+@font-face { font-family: "General Sans"; src: url("/fonts/NIQ54PVBBIWVK3PFSOIOUJSXIJ5WTNDP.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: "General Sans"; src: url("/fonts/HCZ5OQRTYQOAVSHRS6UOFWUZ5CGI6JRO.woff2") format("woff2"); font-style: italic; font-weight: 700; font-display: swap; }
+@font-face { font-family: "General Sans"; src: url("/fonts/H7W54QQR2V6KL5KMDA2PD2KSQRCZHPRE.woff2") format("woff2"); font-style: italic; font-weight: 500; font-display: swap; }
+@font-face { font-family: "General Sans"; src: url("/fonts/3ZLMEXZEQPLTEPMHTQDAUXP5ZZXCZAEN.woff2") format("woff2"); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: "General Sans"; src: url("/fonts/6FVUUVSLJPCCVHIJND4LQZIT4MFZBXYJ.woff2") format("woff2"); font-style: italic; font-weight: 600; font-display: swap; }
+@font-face { font-family: "Open Sauce Sans"; src: url("/fonts/VvQsG6v03iEur3JMvHc8uDrkGo.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Open Sauce Sans"; src: url("/fonts/14ekUNlj0vS79oF2mPCC9M9Rng.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: "Open Sauce One"; src: url("/fonts/3WfnZksKV9qFKlmPOweqZdumjg.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: "Open Sauce Sans"; src: url("/fonts/O2R7AhA6wjBk0GHLJl0N8fqxN0.woff2") format("woff2"); font-style: normal; font-weight: 500; font-display: swap; }
+
+:root {
+  --ink: #151413;
+  --charcoal: #262322;
+  --cream: #f4f2e8;
+  --sand: #e8e4d6;
+  --orange: #f55107;
+  --yellow: #feea9d;
+  --white: #fffffb;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: "General Sans", Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-family: "Open Sauce Sans", Arial, sans-serif; }
+p { margin: 0; }
+button, input, textarea, select { font: inherit; }
+a { color: inherit; }
+img, video { display: block; max-width: 100%; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 10000; padding: 10px 14px; border-radius: 6px; background: var(--white); color: var(--ink); transform: translateY(-500%); }
+.skip-link:focus-visible { transform: translateY(0); }
