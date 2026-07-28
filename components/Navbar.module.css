@@ -136,3 +136,7 @@
   .menu { display: none; }
   .overlay, .mobileLinks { display: none; }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: #f55107; }
+}

@@ -78,3 +78,7 @@
 @media (prefers-reduced-motion: reduce) {
   .container { opacity: 1 !important; transform: none !important; }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .copy a:hover { background: #59524f; }
+}

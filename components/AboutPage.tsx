@@ -43,12 +43,17 @@ function Socials({ name }: { name: string }) {
   );
 }
 
+function IndustryCard({ index }: { index: number }) {
+  const [label, image] = industries[index];
+  return <article className={styles.industryCard}><img src={`${ASSETS}/${image}`} alt="" /><span>{label}</span></article>;
+}
+
 export default function AboutPage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero} aria-labelledby="about-title">
         <div className={styles.intro}>
-          <h1 id="about-title"><strong>Financial clarity and</strong> precision <strong>for confident growth.</strong></h1>
+          <h1 id="about-title"><strong>Financial clarity<br className={styles.phoneBreak} /> and</strong> precision <strong>for<br className={styles.phoneBreak} /> confident growth.</strong></h1>
           <p>We combine precise accounting, proactive compliance, and strategic financial guidance to help businesses grow with stability, control, and confidence.</p>
         </div>
         <div className={styles.heroGrid}>
@@ -56,7 +61,7 @@ export default function AboutPage() {
             <img className={styles.heroPhoto} src={`${ASSETS}/about-hero-main.jpg`} alt="Financial advisor working at a laptop" />
             <div className={styles.heroAction}>
               <span className={styles.callIcon}><img src={`${ASSETS}/about-hero-avatar.jpg`} alt="Financial adviser" /><i><img src={`${ASSETS}/about-phone-icon.svg`} alt="" /></i></span>
-              <h2>Let’s bring clarity<br />to your finances.</h2>
+              <h2>Let’s bring clarity to your finances.</h2>
               <a href="/contact">Book a consultation <Arrow /></a>
             </div>
           </article>
@@ -77,10 +82,10 @@ export default function AboutPage() {
         <div className={styles.missionGrid}>
           <img className={styles.missionPhoto} src={`${ASSETS}/about-mission.jpg`} alt="Advisory team collaborating" />
           <div className={styles.missionCopy}>
-            <h2 id="mission-title"><strong>Building lasting</strong> financial <strong>clarity through accuracy, trust, and long-term partnership.</strong></h2>
+            <h2 id="mission-title"><strong>Building lasting</strong> financial<br className={styles.desktopBreak} /> <strong>clarity through accuracy, trust,<br className={styles.desktopBreak} /> and long-term partnership.</strong></h2>
             <div className={styles.pillars}>
               <article><div><img src={`${ASSETS}/about-mission-icon.svg`} alt="" /><h3>Our mission</h3></div><p>Our mission is to deliver accurate accounting, proactive compliance, and strategic financial guidance that gives businesses complete clarity and confident control over their growth.</p></article>
-              <article><div><img src={`${ASSETS}/about-vision-icon.svg`} alt="" /><h3>Our vision</h3></div><div className={styles.visionMarks} aria-label="Accuracy, trust, clarity, and partnership"><span /><span /><span /><span /></div></article>
+              <article><div><img src={`${ASSETS}/about-vision-icon.svg`} alt="" /><h3>Our vision</h3></div><ul className={styles.visionList}><li>Built on clarity, driven by long-term partnership</li><li>The purpose behind our financial guidance</li><li>Where our journey meets your growth</li><li>Committed to clarity and stability</li></ul></article>
             </div>
             <a className={styles.primaryCta} href="/service-static">See our expertise <Arrow /></a>
           </div>
@@ -91,8 +96,9 @@ export default function AboutPage() {
       <section className={styles.industries} aria-labelledby="industries-title">
         <div className={styles.sectionIntro}><h2 id="industries-title"><strong>Growth across</strong> multiple <strong>sectors</strong></h2><p>We understand that each industry has its own financial complexities, compliance demands, and growth challenges.</p></div>
         <div className={styles.industryMap}>
-          {industries.map(([label, image], index) => <article className={styles[`industry${index + 1}`]} key={label}><img src={`${ASSETS}/${image}`} alt="" /><span>{label}</span></article>)}
-          <span className={styles.industryHub}><img src={`${ASSETS}/05-ELpShQB6dZYiiFyzU47LqQr60.svg`} alt="" /></span>
+          <div className={styles.industryRow1}><IndustryCard index={0} /><span className={styles.industryPlaceholder} aria-hidden="true" /><IndustryCard index={1} /><span className={styles.industryPlaceholder} aria-hidden="true" /></div>
+          <div className={styles.industryRow2}><IndustryCard index={2} /><span className={styles.industryHub}><img src={`${ASSETS}/05-ELpShQB6dZYiiFyzU47LqQr60.svg`} alt="" /></span><IndustryCard index={3} /></div>
+          <div className={styles.industryRow3}><span className={styles.industryPlaceholder} aria-hidden="true" /><IndustryCard index={4} /><span className={styles.industryPlaceholder} aria-hidden="true" /><span className={styles.industryPlaceholder} aria-hidden="true" /></div>
         </div>
       </section>
 

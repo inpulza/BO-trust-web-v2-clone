@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/framework-contract.test.mjs tests/fonts-contract.test.mjs tests/page-composition.test.mjs tests/multipage-routing-contract.test.mjs tests/about-page-contract.test.mjs tests/contact-page-contract.test.mjs tests/service-static-contract.test.mjs tests/case-study-index-contract.test.mjs tests/case-study-detail-contract.test.mjs",
+    "test": "node --test tests/framework-contract.test.mjs tests/fonts-contract.test.mjs tests/page-composition.test.mjs tests/multipage-routing-contract.test.mjs tests/about-page-contract.test.mjs tests/about-visual-contract.test.mjs tests/cta-hover-contract.test.mjs tests/contact-page-contract.test.mjs tests/service-static-contract.test.mjs tests/service-static-visual-contract.test.mjs tests/case-study-index-contract.test.mjs tests/case-study-detail-contract.test.mjs",
     "test:e2e": "node --test --test-concurrency=1 tests/*.e2e.mjs"
   },
   "keywords": ["nextjs", "consulting", "vercel"],

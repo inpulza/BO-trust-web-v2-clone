@@ -29,3 +29,13 @@ a { color: inherit; }
 img, video { display: block; max-width: 100%; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 10000; padding: 10px 14px; border-radius: 6px; background: var(--white); color: var(--ink); transform: translateY(-500%); }
 .skip-link:focus-visible { transform: translateY(0); }
+
+@media (hover: hover) and (pointer: fine) {
+  :is(a,button) {
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(a,button) { transition-duration: 0.01ms; }
+}

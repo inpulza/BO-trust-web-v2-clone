@@ -38,20 +38,22 @@ for (let i=0;i<viewports.length;i++) {
       }
 
       await page.goto(base + '/service-static', { waitUntil:'networkidle' });
-      const pricesBefore = await page.locator('text=/^\$(49|79|109)$/').allTextContents();
-      const yearly = page.getByRole('radio', { name:'Yearly' });
-      const styleBefore = await yearly.evaluate(el => getComputedStyle(el).cssText);
-      await yearly.click();
-      assert.deepEqual(await page.locator('text=/^\$(49|79|109)$/').allTextContents(), pricesBefore);
-      assert.equal(await yearly.getAttribute('aria-checked'), 'false');
-      assert.equal(await yearly.evaluate(el => getComputedStyle(el).cssText), styleBefore);
+      assert.equal(await page.getByRole('radiogroup').count(), 0);
+      assert.equal(await page.getByRole('radio').count(), 0);
+      await page.getByText('Monthly', { exact:true }).waitFor();
+      await page.getByText('Yearly', { exact:true }).waitFor();
 
       await page.goto(base + '/case-study', { waitUntil:'networkidle' });
       assert.equal(await page.locator('main a[href^="/case-study/"]').count(), 4);
       await page.getByRole('button', { name:'Load more' }).click();
       assert.equal(await page.locator('main a[href^="/case-study/"]').count(), 7);
       await page.getByText('That’s everything for now!').waitFor();
-      assert.equal(await page.getByLabel('Main navigation').getByRole('link', { name:'Case Studies', exact:true }).getAttribute('aria-current'), 'page');
+      const mainNavigation = page.getByLabel('Main navigation');
+      if (await mainNavigation.locator('a[aria-current="page"]:visible').count() === 0) {
+        await mainNavigation.getByRole('button', { name:'Open navigation menu' }).click();
+      }
+      const activeNavigationLink = mainNavigation.locator('a[aria-current="page"]:visible');
+      assert.equal(await activeNavigationLink.textContent(), 'Case Studies');
 
       await page.goto(base + '/case-study/cutting-costs-for-a-multi-location-retail-chain', { waitUntil:'networkidle' });
       const email = page.locator('#newsletter-email');
